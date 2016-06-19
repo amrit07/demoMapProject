@@ -50,7 +50,9 @@ angular.module('demoMapApp.controller', [])
             removeMarker();
             listOfPlaces.forEach(function (item,index) {
                  if(index==0){
+                     map.setZoom(14);
                     map.setCenter({lat:item.lat,lng:item.lng});
+                    
                 }
                 var marker = new google.maps.Marker({
                     position: { lat: item.lat, lng: item.lng },
