@@ -28,3 +28,7 @@
   content: "";
   padding: 0;
 }
+.heading{padding:15px 0; border-bottom:2px solid green;margin-bottom:10px;}
+.mapCanvas{width:100;height:500px;background-color:#eee;}
+
+.mBot15{margin-bottom:15px;}

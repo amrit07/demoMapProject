@@ -1,14 +1,19 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
+angular.module('demoMapApp', [
   'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
+  'demoMapApp.controller',
+  'demoMapApp.service',
+  'filtersModule'
+  
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
-
-  $routeProvider.otherwise({redirectTo: '/view1'});
+ 
+  $routeProvider.when('/',{
+    templateUrl:'templates/map.html',
+    controller: 'mapController'
+  })
+  .otherwise({redirectTo: '/'});
 }]);
