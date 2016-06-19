@@ -1,0 +1,23 @@
+<div class="row heading">
+<h1 class="">
+    Find places in your city
+</h1>
+</div>
+<div id="functionality" class="row mBot15">
+    <form name="myForm" class="form">
+        <div class="col-xs-4">
+            <label for="countrySelect">Choose Country</label>
+            <select name="countrySelect" ng-model="data.countrySelect">
+      <option ng-repeat="location in locationData | unique:'country'" value="{{location.country}}">{{location.country}}</option>
+    </select>
+        </div>
+        <div class="col-xs-6">
+            <select name="citySelect" ng-model="data.citySelect" ng-change="updateMarkerList();">
+        <option value="">Select City</option>
+        <option ng-repeat="location in locationData | filterby:'country':data.countrySelect | unique:'city'" value="{{location.city}}">{{location.city}}</option>
+    </select>
+        </div>
+    </form>
+</div>
+<div id="map" class="row mapCanvas">
+</div>
