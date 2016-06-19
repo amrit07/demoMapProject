@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "demomapproject",
   "private": true,
   "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "description": "A demo map project in angularjs",
+  "repository": "https://github.com/amrit07/demoMapProject",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",
